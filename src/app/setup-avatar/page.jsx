@@ -1,6 +1,8 @@
 'use client'
 
 import { AvatarCreator } from '@readyplayerme/react-avatar-creator'
+import { useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
 const config = {
 	clearCache: true,
@@ -19,13 +21,18 @@ const style = {
 const SUBDOMAIN = 'https://phygitals.readyplayer.me/'
 
 export default function SetupAvatar() {
+	const [model, setModel] = useState('')
+	const router = useRouter()
+
 	const handleOnAvatarExported = (event) => {
 		console.log(`Avatar URL is: ${event.data.url}`)
+
+		// router.push('/collection/1')
 	}
 
 	return (
-		<main className='h-screen bg-fuchsia-950'>
-			<section className='h-5/6 bg-orange-700'>
+		<main className='h-screen '>
+			<section className='h-5/6'>
 				<AvatarCreator
 					subdomain='SUBDOMAIN'
 					config={config}

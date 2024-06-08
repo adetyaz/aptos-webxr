@@ -1,33 +1,33 @@
 export const Details = () => {
 	return (
-		<div class='how-work'>
-			<div class='work-heading'>
-				<p class='work-heading-p1'>How it works</p>
-				<p class='work-heading-p2'>Find out how to get started</p>
+		<div className='how-work'>
+			<div className='work-heading'>
+				<p className='work-heading-p1 text-center'>How it works</p>
+				<p className='work-heading-p2 text-center'>
+					Find out how to get started
+				</p>
 			</div>
-			<div class='info-card-nft'>
-				<div class='info-card1'>
+			<div className='info-card-nft'>
+				<div className='info-card1'>
 					<img src='/images/icon.png' alt='wallet' />
-					<p class='info-card-h'>Setup Your wallet</p>
-					<p class='work-heading-p3'>
-						Upload your work and setup your collection. Add a description,
-						social links and floor price.
+					<p className='info-card-h'>Create collection</p>
+					<p className='work-heading-p3'>
+						Upload your NFTs & add type, description, price and other details
 					</p>
 				</div>
-				<div class='info-card2'>
+				<div className='info-card2'>
 					<img src='/images/icon-1.png' alt='collection' />
-					<p class='work-heading-p2'>Create Collection</p>
-					<p class='work-heading-p3'>
-						Upload your work and setup your collection. Add a description,
-						social links and floor price.
+					<p className='work-heading-p2'>Create the Xperience</p>
+					<p className='work-heading-p3'>
+						Create custom avatars, upload 3D images, provide brand and other
+						information
 					</p>
 				</div>
-				<div class='info-card2'>
+				<div className='info-card2'>
 					<img src='/images/icon-2.png' alt='earning' />
-					<p class='work-heading-p2'>Start Earning</p>
-					<p class='work-heading-p3'>
-						Choose between auctions and fixed-price listings. Start earning by
-						selling your NFTs or trading others.
+					<p className='work-heading-p2'>Launch your NFTs</p>
+					<p className='work-heading-p3'>
+						Start making money and building your community on the platform!
 					</p>
 				</div>
 			</div>

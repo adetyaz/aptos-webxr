@@ -14,8 +14,6 @@ export default function Home() {
 			<Trending />
 			<Artist />
 			<More />
-			<Categories />
-			<Highlight />
 			<Details />
 		</main>
 	)

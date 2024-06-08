@@ -76,14 +76,15 @@
 }
 
 body {
-	background-color: #2b2b2b;
+	background-color: #2b2b2b !important;
 	overflow-x: hidden;
+	font-family: var(--font-sans);
 }
 
 /* NavBar */
 .head {
-	height: 60px;
-	background: var(--background, #2b2b2b);
+	/* height: 60px; */
+	background: #2b2b2b;
 	display: flex;
 	justify-content: space-between;
 }
@@ -149,8 +150,8 @@ body {
 /* Hero Section */
 .hero-sec {
 	display: flex;
-	height: 564px;
-	padding: 80px 150px;
+
+	padding: 80px 68px;
 	justify-content: center;
 	align-items: center;
 	gap: 30px;
@@ -665,8 +666,7 @@ gap: 100px;
 }
 
 .nft-card-last {
-	width: 270px;
-	height: 173px;
+	height: 69px;
 	display: flex;
 	padding: 20px 30px 25px 30px;
 	flex-direction: column;
@@ -961,7 +961,7 @@ gap: 100px;
 }
 
 .how-work {
-	width: 1060px;
+	/* width: 1060px; */
 	height: 578px;
 	display: flex;
 	padding: 80px 144px 45px 144px;
@@ -970,10 +970,6 @@ gap: 100px;
 	gap: 48px;
 	align-self: stretch;
 	background: #2b2b2b;
-}
-
-.work-heading {
-	margin-right: 70%;
 }
 
 .work-heading-p1 {
@@ -1136,7 +1132,6 @@ gap: 100px;
 }
 
 .footer {
-	width: 1069px;
 	height: 254px;
 	display: flex;
 	padding: 40px 140px;
@@ -1283,7 +1278,7 @@ gap: 100px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: 110%;
-	margin-right: 73%;
+	text-align: left;
 }
 
 #foter-logo {

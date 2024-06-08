@@ -3,28 +3,15 @@ import { useWallet } from '@aptos-labs/wallet-adapter-react'
 import { Aptos, AptosConfig, Network } from '@aptos-labs/ts-sdk'
 import '@aptos-labs/wallet-adapter-ant-design/dist/index.css'
 import { WalletSelector } from '@aptos-labs/wallet-adapter-ant-design'
+import { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 export const Navbar = () => {
 	const [accountHasList, setAccountHasList] = useState(false)
-	const {
-		connect,
-		account,
-		network,
-		connected,
-		disconnect,
-		wallet,
-		wallets,
-		signAndSubmitTransaction,
-		signAndSubmitBCSTransaction,
-		signTransaction,
-		signMessage,
-		signMessageAndVerify,
-	} = useWallet()
+	const { account } = useWallet()
 
 	const aptosConfig = new AptosConfig({ network: Network.TESTNET })
 	const aptos = new Aptos(aptosConfig)
-
-	console.log(account)
 
 	useEffect(() => {
 		fetchList()
@@ -46,20 +33,18 @@ export const Navbar = () => {
 		}
 	}
 	return (
-		<header class='head'>
-			<div class='market'>
-				<span class='material-symbols-outlined' id='store-icion'>
-					storefront
-				</span>
-				<h4 id='h4'>NFT Marketplace</h4>
-			</div>
-			<div class='head-h'>
-				<h5 class='head-h5'>MarketPlace</h5>
-				<h5 class='head-h5'>Ranking</h5>
-				<h5 class='head-h5'>
+		<header className='head'>
+			<Link href='/' className='cursor-pointer'>
+				<div className='market'>
+					<img src='/images/logo.png' alt='logo' className='h-16 w-32' />
+				</div>
+			</Link>
+			<div className='head-h'>
+				<h5 className='head-h5'>MarketPlace</h5>
+				<h5 className='head-h5'>Ranking</h5>
+				<h5 className='head-h5'>
 					<WalletSelector />
 				</h5>
-				<button class='nav-btn'>Sign Up</button>
 			</div>
 		</header>
 	)
